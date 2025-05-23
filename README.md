@@ -10,10 +10,22 @@ Write a C program to read 3 characters one by one and print the characters in a 
 4.	End the program.
 
 ## PROGRAM:
-
+~~~
+#include <stdio.h>
+int main()
+{
+    char ch1, ch2, ch3,A,B,C;
+    scanf(" %c", &ch1);
+    scanf(" %c", &ch2);
+    scanf(" %c", &ch3);
+    printf("Characters in reverse order: %c %c %c\n", ch3, ch2, ch1);
+    return 0;
+}
+~~~
 ## OUTPUT:
 
 
+![image](https://github.com/user-attachments/assets/e6e6524f-5570-4e57-83b9-e672925d60fe)
 
 
 
@@ -46,8 +58,24 @@ Write a C program to read A values and check whether A is positive number or not
 6.End the program.
 
 # PROGRAM:
+~~~
+#include <stdio.h>
+int main()
+{
+    int A;
+    scanf("%d", &A);
+    if (A > 0) {
+        printf("The number is positive.\n");
+    } else {
+        printf("The number is not positive.\n");
+    }
+    return 0;
+}
+~~~
 
 # OUTPUT:
+
+![image](https://github.com/user-attachments/assets/b539760f-1cba-435f-886d-5034a4866422)
 
 
 
@@ -80,8 +108,20 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
-
+~~~
+#include <stdio.h>
+int main() 
+{
+    int a, b, min;
+    scanf("%d", &a);
+    scanf("%d", &b);
+    min = (a < b) ? a : b;
+    printf("The minimum number is: %d\n", min);
+    return 0;
+}
+~~~
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/8823ff42-164f-4a63-bb15-6455cb5d75c3)
 
 
 
@@ -111,9 +151,21 @@ Write a C program to check whether the input value is equal to 1 using simple if
 6.	End the program.
 
 ## PROGRAM:
-
+~~~
+#include <stdio.h>
+int main() 
+{
+    int value;
+    scanf("%d", &value);
+    if (value == 1) {
+        printf("The value is equal to 1.\n");
+    }
+    return 0;
+}
+~~~
 ## OUTPUT:
 
+![image](https://github.com/user-attachments/assets/8547f1fe-00fa-4daa-acd9-bdd2357035e3)
 
 
 
@@ -147,8 +199,39 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
+~~~
+#include <stdio.h>
+int main() 
+{
+    int m1, m2, m3, total;
+    float percentage;
+    scanf("%d %d %d", &m1, &m2, &m3);
+    total = m1 + m2 + m3;
+    percentage = total / 3.0;
+    if (m1 < 35 || m2 < 35 || m3 < 35 || percentage < 35) {
+        printf("Result: Fail\n");
+    }
+    else if (percentage >= 60) {
+        printf("Result: First Division\n");
+    }
+    else if (percentage >= 50) {
+        printf("Result: Second Division\n");
+    }
+    else {
+        printf("Result: Pass\n");
+    }
 
+    printf("Total Marks = %d\n", total);
+    printf("Percentage = %.2f%\n", percentage);
+
+    return 0;
+}
+~~~
 ## OUTPUT:
+
+![image](https://github.com/user-attachments/assets/36683485-ca1c-40a8-9aa1-eb1889c5282f)
+
+
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
