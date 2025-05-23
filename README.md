@@ -110,19 +110,31 @@ Write a program to find minimum between two fraction numbers using conditional o
 ## PROGRAM:
 ~~~
 #include <stdio.h>
-int main() 
-{
-    int a, b, min;
-    scanf("%d", &a);
-    scanf("%d", &b);
-    min = (a < b) ? a : b;
-    printf("The minimum number is: %d\n", min);
+
+int main() {
+    int a1, a2, b1, b2;
+    float n1, n2, min;
+
+    printf("Enter Numerator and Denominator for the first number: ");
+    scanf("%d %d", &a1, &a2);
+
+    printf("Enter Numerator and Denominator for the second number: ");
+    scanf("%d %d", &b1, &b2);
+
+    // To ensure floating-point division
+    n1 = (float)a1 / a2;
+    n2 = (float)b1 / b2;
+
+    min = (n1 < n2) ? n1 : n2;
+
+    printf("The minimum number is: %.2f\n", min);
+
     return 0;
 }
+
 ~~~
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/8823ff42-164f-4a63-bb15-6455cb5d75c3)
-
+![image](https://github.com/user-attachments/assets/174aefc4-0051-4ad6-b0d2-46d37ba11977)
 
 
 
